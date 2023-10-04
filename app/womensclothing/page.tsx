@@ -1,21 +1,21 @@
-import Header from "../Components/Header"
-import ProductCard from "../Components/ProductCard"
+"use client";
+import Header from "../../Components/Header";
+import ProductCard from "../../Components/ProductCard";
 
+const womensclothing = async () => {
 
-const womensclothing =async () => {
-          //fetch products
-
+  //fetch products
   const res = await fetch("https://fakestoreapi.com/products");
   const products: Product[] = await res.json();
-      //filter only fashion products
+
+  //filter only fashion products
   const filterProducts = products.filter((item) => {
-    return (
-      item.category === "women's clothing" 
-    );
+    return item.category === "women's clothing";
   });
+  
   return (
     <div>
-        <section className="flex flex-col pb-24 ">
+      <section className="flex flex-col pb-24 ">
         <Header />
       </section>
       <section>
@@ -34,7 +34,7 @@ const womensclothing =async () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default womensclothing
+export default womensclothing;
