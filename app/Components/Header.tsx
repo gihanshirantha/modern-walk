@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -15,7 +14,7 @@ const Header = () => {
     <header
       className={`${
         isActive ? "bg-white py-4 shadow-md" : "bg-none py-6 "
-      } fixed w-full z-10 transition-all`}
+      } fixed w-full z-10 transition-all shadow-md`}
     >
       <div>
         <Link href={"/"}>
