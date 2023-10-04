@@ -7,7 +7,7 @@ type ProductCardProps = {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { id, image, description, title, price,category } = product;
   return (
-    <div className="rounded-3xl border-[e4e4e4] bg-white ">
+    <div className="rounded-3xl border-[e4e4e4] bg-white shadow-lg ">
       <div
         className=" h-[300px] p-6 mb-4 relative overflow-hidden group transition rounded-md"
       >
